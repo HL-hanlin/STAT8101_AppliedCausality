@@ -1,3 +1,5 @@
 This is the repository for the PhD research course STAT 8100 Applied Causality. 
 
-Will be updated every week...
+# Abstract of the project
+
+TODO
