@@ -10,3 +10,4 @@ Since each traffic light could receive information both from observations $\math
     
 Another realistic and interesting setting I could think of is to assume one (or more) traffic light has better sensor that could gather information across several blocks, while other traffic lights could only sense locally. In such setting, we could probably borrow ideas from causal transfer learning and causal imitation learning.
 
+ 
