@@ -12,7 +12,7 @@ I first tried to read this book without taking any notes. But after going throug
 
 Therefore, I nearly spent the whole week making the very long reading notes as above (which is obvious not readable for other students, so I will not do this next time :) 
 
-But on the other hand, I realized making such long notes when I'm now to causal inference is quite important to me. And I indeed looked it back several times to review some definitions & properties during this semester. 
+But on the other hand, such notes is a good reference. And I indeed looked it back several times to review some definitions & properties during this whole semester. 
 
 
 
