@@ -34,9 +34,11 @@ This [Causal Reinforcement Learning (CRL)](https://crl.causalai.net/) website is
 * The above two papers mainly deal with unobserved confounders, while the following paper [Transfer Learning in Multi-Armed Bandits: A Causal Approach (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/Transfer%20Learning%20in%20Multi-Armed%20Bandits.pdf) talks about how to transfer knowledge across bandit agents where causal effects cannot be identified by do-calculous.
 
 
-Next, I also find the research at the intersection of imitation learning (reverse reinforcement learning) and causal inference quite interesting. Recent Papers
+Next, I also find the research at the intersection of imitation learning (reverse reinforcement learning) and causal inference quite interesting. The RL course I took this semester also covers Imitation Learning [(this is the syllabus)](https://people.cs.umass.edu/~akshay/courses/coms6998-11/index.html) as a topic (but will only touch it nearly at the end of the semester). To confess, I did not have enough time to read the two papers I listed below carefully. But I will definitely go back to this topic later in this semester!
 
+* Recent Papers like [Causal Imitation Learning with Unobserved Confounders](https://causalai.net/r66.pdf) and [Sequential Causal Imitation Learning with Unobserved Confounders](https://causalai.net/r76.pdf) nicely studies UC problems in imitation learning. 
 
+* Prof. [Ermon](https://cs.stanford.edu/~ermon/) has also done several research related to imitation learning (but only from the RL side). Maybe I could also read some of his paper to see if I could find some good idea.
 
 
 
