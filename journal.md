@@ -4,11 +4,9 @@
 
 ## Week 1, Jan 23 - Jan 30: 
 
-*Created this repo!
+* Created this repo!
 
-*Finished the assigned reading: [Causal Inference In Statistics: A Primer](https://www.datascienceassn.org/sites/default/files/CAUSAL%20INFERENCE%20IN%20STATISTICS.pdf). 
-
-Detailed [reading notes](https://www.datascienceassn.org/sites/default/files/CAUSAL%20INFERENCE%20IN%20STATISTICS.pdf) is under /doc folder of this repo.
+* Finished the assigned reading: [Causal Inference In Statistics: A Primer](https://www.datascienceassn.org/sites/default/files/CAUSAL%20INFERENCE%20IN%20STATISTICS.pdf). Detailed [reading notes](https://www.datascienceassn.org/sites/default/files/CAUSAL%20INFERENCE%20IN%20STATISTICS.pdf) is under /doc folder of this repo.
 
 I first tried to read this book without taking any notes. But after going through it once, I found that I did not learn the concepts & materials very well, and realized that it might be better for me to make some notes by summarizing the key points in this book to help my understanding. 
 
