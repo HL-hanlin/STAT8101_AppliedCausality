@@ -1,6 +1,6 @@
 # Progress
 
-Week 1, Jan 23 - Jan 30: 
+## Week 1, Jan 23 - Jan 30: 
 
 Created this repo!
 
