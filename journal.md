@@ -51,7 +51,7 @@ Next, I also find the research at the intersection of imitation learning (revers
 
 Then I also searched for topics related to Multi-Agent Reinforcement Learning, and actually find a quite good summary!
 
-* [Causal Multi-Agent Reinforcement Learning: Review and Open Problems](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Causal%20MARL%20open%20problems.pdf)
+* This very recent paper [Causal Multi-Agent Reinforcement Learning: Review and Open Problems](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Causal%20MARL%20open%20problems.pdf) summarizes several open problems in causal MARL, and it mentioned that researchers before did not make enough connections between the CI side and the MARL side. A good synthetic example it listed there is the traffic light control problem, which is a good example to illustrate the usefullness of causal inference on MARL problems. And I think this might be a good way to delve into in the following weeks, since it is an active and valuable area of research! :)
 
 
 
