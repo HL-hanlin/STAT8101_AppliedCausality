@@ -1,5 +1,7 @@
 # Thinking & Progress
 
+<br />
+
 ## Week 1, Jan 23 - Jan 30: 
 
 Created this repo!
@@ -43,6 +45,9 @@ Next, I also find the research at the intersection of imitation learning (revers
 * Prof. [Ermon](https://cs.stanford.edu/~ermon/) has also done several research related to imitation learning (but only from the RL side). Maybe I could also read some of his paper to see if I could find some good idea.
 
 
+
+<br />
+<br />
 
 
 ## Week 3, Feb 7 - Feb 13:
