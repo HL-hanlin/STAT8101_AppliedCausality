@@ -25,6 +25,8 @@ Start thinking about project topics.
 
 I took IEOR 4575 Reinforcement Learning from Prof. Shipra, as well as COMS 6998 Bandits & Reinforcement Learning from [Prof. Krishnamurthy](https://people.cs.umass.edu/~akshay/) this semester, so I'm very willing to do some projects at the intersection of causal inference and reinforcement learning!
 
+<br />
+
 My strategy this week is try to read broadly to find a potential good topic for research! 
 
 <br />
