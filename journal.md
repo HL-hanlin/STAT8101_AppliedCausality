@@ -29,11 +29,11 @@ My strategy this week is try to read broadly to find a potential good topic for 
 
 This [Causal Reinforcement Learning (CRL)](https://crl.causalai.net/) website is quite useful, since it summarizes recent advances of CRL according to several tasks pretty systematically. I started my reading from several papers that utilize causal inference on [Multi-Armed Bandits](https://en.wikipedia.org/wiki/Multi-armed_bandit), which is an important RL model.
 
-* I first read the paper [Bandits with Unobsergved Confounders: A Causal Approach (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/Bandits%20with%20Unobserved%20Confounders.pdf), which is probably the paper that intersects causal inference with RL models with unobserved confounders (UC). It showed that when UC exists, current bandit algorithms which try to maximize rewards based on estimation of the experimental distribution, are not always the best to pursue. The greedy casino example in this paper is quite useful for illustration.
+* I first read the paper [Bandits with Unobsergved Confounders: A Causal Approach (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Bandits%20with%20Unobserved%20Confounders.pdf), which is probably the paper that intersects causal inference with RL models with unobserved confounders (UC). It showed that when UC exists, current bandit algorithms which try to maximize rewards based on estimation of the experimental distribution, are not always the best to pursue. The greedy casino example in this paper is quite useful for illustration.
 
-* To follow up, I read the other paper [Counterfactual Data-Fusion for Online Reinforcement Learning (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/Counterfactual%20Data-Fusion%20for%20Online%20Reinforcement%20Learners.pdf) that could be seen as a generalization of the greedy casino example in the last paper by using counterfactual-based decision making. 
+* To follow up, I read the other paper [Counterfactual Data-Fusion for Online Reinforcement Learning (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Counterfactual%20Data-Fusion%20for%20Online%20Reinforcement%20Learners.pdf) that could be seen as a generalization of the greedy casino example in the last paper by using counterfactual-based decision making. 
 
-* The above two papers mainly deal with unobserved confounders, while the following paper [Transfer Learning in Multi-Armed Bandits: A Causal Approach (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/Transfer%20Learning%20in%20Multi-Armed%20Bandits.pdf) talks about how to transfer knowledge across bandit agents where causal effects cannot be identified by do-calculous.
+* The above two papers mainly deal with unobserved confounders, while the following paper [Transfer Learning in Multi-Armed Bandits: A Causal Approach (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Transfer%20Learning%20in%20Multi-Armed%20Bandits.pdf) talks about how to transfer knowledge across bandit agents where causal effects cannot be identified by do-calculous.
 
 
 Next, I also find the research at the intersection of imitation learning (reverse reinforcement learning) and causal inference quite interesting. The RL course I took this semester also covers Imitation Learning [(this is the syllabus)](https://people.cs.umass.edu/~akshay/courses/coms6998-11/index.html) as a topic (but will only touch it nearly at the end of the semester). To confess, I did not have enough time to read the two papers I listed below carefully. But I will definitely go back to this topic later in this semester!
@@ -41,6 +41,11 @@ Next, I also find the research at the intersection of imitation learning (revers
 * Recent Papers like [Causal Imitation Learning with Unobserved Confounders](https://causalai.net/r66.pdf) and [Sequential Causal Imitation Learning with Unobserved Confounders](https://causalai.net/r76.pdf) nicely studies UC problems in imitation learning. 
 
 * Prof. [Ermon](https://cs.stanford.edu/~ermon/) has also done several research related to imitation learning (but only from the RL side). Maybe I could also read some of his paper to see if I could find some good idea.
+
+
+Then I also searched for topics related to Multi-Agent Reinforcement Learning, and actually find a quite good summary!
+
+* [Causal Multi-Agent Reinforcement Learning: Review and Open Problems](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Causal%20MARL%20open%20problems.pdf)
 
 
 
