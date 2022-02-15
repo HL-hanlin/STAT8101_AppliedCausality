@@ -1,4 +1,4 @@
-# Progress
+# Thinking & Progress
 
 ## Week 1, Jan 23 - Jan 30: 
 
