@@ -39,7 +39,13 @@ This [Causal Reinforcement Learning (CRL)](https://crl.causalai.net/) website is
 
 * The above two papers mainly deal with unobserved confounders, while the following paper [Transfer Learning in Multi-Armed Bandits: A Causal Approach (annotated)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Transfer%20Learning%20in%20Multi-Armed%20Bandits.pdf) talks about how to transfer knowledge across bandit agents where causal effects cannot be identified by do-calculous.
 
+
 <br />
+<br />
+
+
+## Week 3, Feb 7 - Feb 13:
+
 
 Next, I also find the research at the intersection of imitation learning (reverse reinforcement learning) and causal inference quite interesting. The RL course I took this semester also covers Imitation Learning [(this is the syllabus)](https://people.cs.umass.edu/~akshay/courses/coms6998-11/index.html) as a topic (but will only touch it nearly at the end of the semester). To confess, I did not have enough time to read the two papers I listed below carefully. But I will definitely go back to this topic later in this semester!
 
@@ -54,13 +60,8 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 * This very recent paper [Causal Multi-Agent Reinforcement Learning: Review and Open Problems](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Causal%20MARL%20open%20problems.pdf) summarizes several open problems in causal MARL, and it mentioned that researchers before did not make enough connections between the CI side and the MARL side. A good synthetic example it listed there is the traffic light control problem, which is a good example to illustrate the usefullness of causal inference on MARL problems. And I think this might be a good way to delve into in the following weeks, since it is an active and valuable area of research! :)
 
 
-
 <br />
 <br />
-
-
-## Week 3, Feb 7 - Feb 13:
-
 
 
 ## Week 4, Feb 14 - Feb 20:
