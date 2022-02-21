@@ -83,4 +83,6 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 * Found another good paper related to counterfactual reasoning on MARL: [Social Influence as Intrinsic Motivation for Multi-Agent Deep RL](https://arxiv.org/pdf/1810.08647.pdf)
 
+* Found a good MARL research team: [Whiteson Research Lab](http://whirl.cs.ox.ac.uk/index.html)
+
 
