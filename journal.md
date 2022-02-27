@@ -66,6 +66,8 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 ## Week 4, Feb 14 - Feb 20:
 
+* finished reading the paper [Using Synthetic Controls](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Using%20Synthetic%20Controls.pdf)
+
 * Had a closer look at the paper recent paper [Causal Multi-Agent Reinforcement Learning: Review and Open Problems](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Causal%20MARL%20open%20problems.pdf). Especially the relationship between MDP and MACM(multi-agent causal model, which could be seen as a generalization of SCM), as well as how counterfactuals could be incorporated in decision making of agents.
 
 * For the counterfactual reasoning part, I realized that there had been papers using counterfactual reasoning in MARL starting from 2018 [Counterfactual Multi-Agent Policy Gradients (COMA)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/COMA.pdf). Besides, another paper [Learning to Communicate Using Counterfactual Reasoning](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Vanneste.pdf) further talks about how agents sould communicate informations to improve efficiency. 
