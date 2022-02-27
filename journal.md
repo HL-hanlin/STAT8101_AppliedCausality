@@ -79,6 +79,8 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 ## Week 4, Feb 21 - Feb 27:
 
+* finished reading the paper [Matrix Completion Methods for Causal Panel Data Models](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/matrix%20completion%20methods.pdf)
+
 * I searched for some more papers this weeks, and found that there are little paper that really uses causal graphs in MARL. The previous papers [COMA](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/COMA.pdf) etc, they defined "counterfactual" without using causal graphs, as the difference in probability distributions. However, we could see a clear connection between structual cansal model(SCM), or [multi-agent causal model (MACM)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Inference%20in%20MACM.pdf) with decentralized MDP. So we should either somehow know the causal graph apriori, or do some structual learning / causal discovery. Therefore, I further read two papers related to causal discovery in RL or MARL problems: [Distributed Learning of Multi-Agent Causal Models](https://ieeexplore.ieee.org/document/1565554), and [Causal Discovery With Reinforcement Learning](https://arxiv.org/pdf/1906.04477.pdf).
 
 * Found another good paper related to counterfactual reasoning on MARL: [Social Influence as Intrinsic Motivation for Multi-Agent Deep RL](https://arxiv.org/pdf/1810.08647.pdf)
