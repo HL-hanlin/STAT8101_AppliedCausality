@@ -91,6 +91,6 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
   * It seems that such formulation might also work for other experiment set ups (for example, the traffic lights coorporation example, since each traffic light could also only observe part of the states). 
   * Some other related papers from the same group: [Intrinsic Social Motivation via Causal Inference on MARL](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/intrinsic%20social%20motivation.pdf), and [Inequity Aversion Improves Cooperation in Intertemporal Social Dilemmas](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Inequity%20aversion%20improves%20cooperation%20in%20intertemporal%20social%20dilemmas.pdf)
 
-* Found a good MARL research team: [Whiteson Research Lab](http://whirl.cs.ox.ac.uk/index.html)
+* Found some good MARL research teams: [Whiteson Research Lab](http://whirl.cs.ox.ac.uk/index.html), [Wen Sun](https://wensun.github.io/), [Berkeley MARL Seminar](https://sites.google.com/view/berkeleymarl/home)
 
 
