@@ -79,7 +79,7 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 <br />
 <br />
 
-## Week 4, Feb 21 - Feb 27:
+## Week 5, Feb 21 - Feb 27:
 
 * finished reading the paper [Matrix Completion Methods for Causal Panel Data Models](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/matrix%20completion%20methods.pdf)
 
@@ -94,5 +94,16 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
   * Two main authors: [eugenevinitsky](https://eugenevinitsky.github.io/), [natashajaques](https://natashajaques.ai/), and code [here](https://github.com/eugenevinitsky/sequential_social_dilemma_games)
 
 * Found some good MARL research teams: [Whiteson Research Lab](http://whirl.cs.ox.ac.uk/index.html), [Wen Sun](https://wensun.github.io/), [Berkeley MARL Seminar](https://sites.google.com/view/berkeleymarl/home)
+
+
+
+
+<br />
+<br />
+
+## Week 6, Feb 28 - Mar 6:
+
+* Mainly Preparing for midterms this week. Will catch up during the spring break.
+
 
 
