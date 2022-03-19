@@ -131,5 +131,6 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 * Read the paper [CausalVAE: Disentangled Representation Learning
 via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CausalVAE_Disentangled_Representation_Learning_via_Neural_Structural_Causal_Models_CVPR_2021_paper.pdf). It assumes that we already know n concepts in the image data (e.g. 4 concepts: smile, age, gender, haircolor). However, we do not have these concepts in our setting. Could we regard these n concepts as the K different categories in the codebook on our VQ-VAE model?
 
+* Read the paper [Discovering Causal Signals in Images](https://arxiv.org/pdf/1605.08179.pdf). It provides a procedure to detect objects in an image scene (e.g. detact wheels from cars). And it only works for such object-scene pairs. This is a little bit different from our setting: we want to know the causal relationship among K different categories in our codebook of VQ-VAE. Our setting is more complicated: there might be possible that more than one categories together will cause another one or more category/categories. So we could not use their methods directly. This strengthened our question: are there better causal discovery methods better than methods based on random dropout?
 
 
