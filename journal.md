@@ -107,3 +107,28 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 
 
+<br />
+<br />
+
+## Week 7, Mar 7 - Mar 13:
+
+* Mainly Preparing for midterms this week. Will catch up during the spring break.
+
+
+
+<br />
+<br />
+
+## Week 8, Mar 14 - Mar 20:
+
+### Causal Confusion in Imitation Learning
+
+
+* Read the paper [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf).
+
+* Implemented the code for [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf), and adjusted 
+
+
+
+
+
