@@ -1,0 +1,1 @@
+This is the official code from the paper [Causal Confusion In Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf), which only contains the code for the simple mountain car environment. We contain the code here, since it is the starting point of our project :) 
