@@ -129,7 +129,7 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 * Implemented the code for [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf), and adjusted 
 
 * Read the paper [CausalVAE: Disentangled Representation Learning
-via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CausalVAE_Disentangled_Representation_Learning_via_Neural_Structural_Causal_Models_CVPR_2021_paper.pdf). It assumes that we already know n concepts in the image data (e.g. 4 concepts: smile, age, gender, haircolor). However, we do not have these concepts in our setting. Could we regard these n concepts as the K different categories in the codebook on our VAE model?
+via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CausalVAE_Disentangled_Representation_Learning_via_Neural_Structural_Causal_Models_CVPR_2021_paper.pdf). It assumes that we already know n concepts in the image data (e.g. 4 concepts: smile, age, gender, haircolor). However, we do not have these concepts in our setting. Could we regard these n concepts as the K different categories in the codebook on our VQ-VAE model?
 
 
 
