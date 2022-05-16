@@ -2,6 +2,15 @@
 
 <br />
 
+This markdown file keeps track of our project prograss. At the first several weeks, I mainly focus on the problem of Multi-agent Reinforcement Learning (MARL), where counterfactual thinking could be an intersting problem. Then I gradually switch to the topic of causal confusion in imitation learning, which is the backup project plan I had besides MARL. Greatly inspired by the non-linear IRM paper from Lu et al. we read in class, I finally decide to focus specifically on causal confusion with multiple environments. 
+
+Therefore, I mainly focus on reading related papers in the first several weeks, and then gradually conduct more experiments.
+
+
+<br />
+<br />
+
+
 ## Week 1, Jan 23 - Jan 30: 
 
 * Created this repo!
@@ -124,9 +133,16 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 ### Causal Confusion in Imitation Learning
 
 
+In this week, I decided to switch to the backup project of causal confusion in imitation learning. The main reason for this is that I found the paper [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf) really interesting! 
+
 * Read the paper [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf).
 
-* Implemented the code for [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf), and adjusted 
+* Implemented the code for [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf).
+
+
+In this paper, they propose a non-causal approach to solve the causal confusion problem. Therefore, a natural question is: can we design some method that could solve the causal confusion problem by learning the underlying causal graph explicitly?
+
+With such question in mind, I also searched and found the following two papers might be relevant.
 
 * Read the paper [CausalVAE: Disentangled Representation Learning
 via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_CausalVAE_Disentangled_Representation_Learning_via_Neural_Structural_Causal_Models_CVPR_2021_paper.pdf). It assumes that we already know n concepts in the image data (e.g. 4 concepts: smile, age, gender, haircolor). However, we do not have these concepts in our setting. Could we regard these n concepts as the K different categories in the codebook on our VQ-VAE model?
@@ -156,6 +172,9 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 
 ## Week 10, Mar 28 - Apr 3:
 
+* Briefly discussed my project idea with Prof. Blei. I got really stucked at this point since it seems that the yellow indicator light in [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf) is perfectly correlated with brakes, so there's no way to know indicator light is the effect rather than the cause of brake. As suggested by Prof., multiple environments might be a way to direction to go, since unsupervised learning of disentangled representations is fundamentally impossible without inductive biases on both the models and the data as proved by Locatello in the paper [Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations](https://arxiv.org/abs/1811.12359). 
+
+* Therefore, I focus on the Atari Games dataset (especially Pong), and tried to create images from multiple environments. My procedure for creating 2 different environments are as follows: in the first environment, I just use the original image from games screenshot. In the second environment, I masked out the scores at the top of each image, and added a number representing precious actions at the left bottom corner of the image. In this way, the first image could represent an environment with scores (which is a effect of action), and the second image could represent an environment with previous actions (which is cause of action). We use these two variants as our training environments, and we define our testing environment as the image with neither scores nor previous actions (so it is not contaminated by spurious informations). However, I'm not quite sure how to create multiple environments for other Atari Games, since the scores at the top of the image is unique to this Pong dataset. 
 
 
 
@@ -181,7 +200,7 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 
 ## Week 12, Apr 11 - Apr 17:
 
-
+Prof. Blei talks about the paper [Nonlinear Invariant Risk Minimization: A Causal Approach](https://arxiv.org/abs/2102.12353) this week. This paper is a turning point of my project progress! 
 
 
 
