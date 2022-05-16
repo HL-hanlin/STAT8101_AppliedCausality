@@ -9,4 +9,6 @@ Therefore, it is tempting to ask could we design a method that explicitly learns
 Greatly inspired by the Nonlinear IRM model proposed by Lu et al. 2019, we consider the setting of learning from expert's demonstrations under multiple environments, with the aim of generalizing well to new unseen environments. We make several adjustments of the original iCaRL three-phase procedure to adapt it to our imitation learning tasks, and proposed our new algorithm, Invariant Behavioral Cloning (IBC). We compare our method against several benchmark methods on three OpenAI Gym control tasks and show its effectiveness in learning imitation policies capable of generalizing to new environments. Finally, to boost our understanding, we also conduct extensive ablation tests over different part of our algorithm, which we believe could inspire future research in the direction of causal imitation learning. 
 
  
+# Records of project process 
+
 Weekly updates of our project is in ```journal.md```
