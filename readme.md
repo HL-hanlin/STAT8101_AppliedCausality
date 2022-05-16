@@ -11,4 +11,9 @@ Greatly inspired by the Nonlinear IRM model proposed by Lu et al. 2019, we consi
  
 # Records of project process 
 
-Weekly updates of our project is contained in ```journal.md```, which includes related papers, ideas and experiments about this project.
+Weekly updates of our project is contained in ```journal.md```, which includes related papers, ideas and experiments about this project. Keeping track of these materials is indeed helpful and valuable for reference!
+
+
+# Code 
+
+Code for our final project is under ```./src/code```. We also includes some additional code we implemented but not included in our final project for VQ-VAEs and VQ-VAE2 on Atari Games under ```./src/unused_code```. 
