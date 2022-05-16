@@ -134,3 +134,104 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 * Read the paper [Discovering Causal Signals in Images](https://arxiv.org/pdf/1605.08179.pdf). It provides a procedure to detect objects in an image scene (e.g. detact wheels from cars). And it only works for such object-scene pairs. This is a little bit different from our setting: we want to know the causal relationship among K different categories in our codebook of VQ-VAE. Our setting is more complicated: there might be possible that more than one categories together will cause another one or more category/categories. So we could not use their methods directly. This strengthened our question: are there better causal discovery methods better than methods based on random dropout?
 
 
+
+
+
+
+<br />
+<br />
+
+## Week 9, Mar 21 - Mar 27:
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+
+## Week 10, Mar 28 - Apr 3:
+
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+
+## Week 11, Apr 4 - Apr 10:
+
+
+
+
+
+
+
+<br />
+<br />
+
+## Week 12, Apr 11 - Apr 17:
+
+
+
+
+
+
+
+<br />
+<br />
+
+## Week 13, Apr 18 - Apr 24:
+
+
+
+
+
+
+
+
+<br />
+<br />
+
+## Week 14, Apr 25 - May 1:
+
+As suggested by Prof. Blei during the office hour, we need to correct for multiplicity when using multiple independent FCIT tests in phase 2 of our IBC algorithm. The paper [The multiple problems of multiplicity - whether and how to correct for many statistical tests](https://pubmed.ncbi.nlm.nih.gov/26245806/) is a pretty good summary that contains several methods for doing multiplicity correction. I followed the method Sidak-Bonferroni to adjust the confidence level \alpha to correct for multiplicity. 
+
+However, I gradually realized that such confidence level \alpha is also a hyper-parameter that needs to be carefully tuned. In our original method, we define a threshold T. If a latent variable $Z_i$ is tests to be independent with k other latent variables, and the value for k is >= T, then we regard it as one of the direct parents of actions A. So the threshold T is a hyper-parameter that needs to be tuned in our original method. Comparing these old and new approaches, since we always need to tune some hyper-parameter, I guess there is no significant benefit from correction of multiplicity. 
+
+
+
+
+<br />
+<br />
+
+## Week 15, May 2 - May 8:
+
+Realizing score matching could lead to great variance, I searched for a while and found several methods are designed to tackle this problem, including DCM and SSM. From the paper of [Sliced Score Matching](https://arxiv.org/pdf/1905.07088.pdf), which is published in year 2019, it achieves the best performance in comparison with other methods. Therefore, we adopt their method in replace of the original score matching in phase 1 from Lu et al 2019. From the training loss curve, we indeed see a great benefit from using SSM! The loss curve stabilizes after around 500 iterations. In comparison, we need to choose the trained model which achieves the lowest training loss in our original score matching implementation, which uas a very large variance. I'm pretty happy with this SSM method which indeed helps a lot!
+
+
+
+
+
+<br />
+<br />
+
+## Week 16, May 9 - May 15:
+
+This week, I mainly focus on writing the project report (as well as preparing for final exams from our courses). 
+
+
+
+
+
+
+
