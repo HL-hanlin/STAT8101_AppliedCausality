@@ -11,4 +11,4 @@ Greatly inspired by the Nonlinear IRM model proposed by Lu et al. 2019, we consi
  
 # Records of project process 
 
-Weekly updates of our project is contained in ```journal.md```, where we include the papers we read, ideas we had, and experiments we made.
+Weekly updates of our project is contained in ```journal.md```, which includes related papers, ideas and experiments about this project.
