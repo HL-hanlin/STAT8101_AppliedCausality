@@ -94,6 +94,15 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 * I searched for some more papers this weeks, and found that there are little paper that really uses causal graphs in MARL. The previous papers [COMA](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/COMA.pdf) etc, they defined "counterfactual" without using causal graphs, as the difference in probability distributions. However, we could see a clear connection between structual cansal model(SCM), or [multi-agent causal model (MACM)](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Inference%20in%20MACM.pdf) with decentralized MDP. So we should either somehow know the causal graph apriori, or do some structual learning / causal discovery. Therefore, I further read two papers related to causal discovery in RL or MARL problems: [Distributed Learning of Multi-Agent Causal Models](https://ieeexplore.ieee.org/document/1565554), and [Causal Discovery With Reinforcement Learning](https://arxiv.org/pdf/1906.04477.pdf).
 
+
+
+
+
+<br />
+<br />
+
+## Week 6, Feb 28 - Mar 6:
+
 * Found another good paper related to counterfactual reasoning on MARL: [Social Influence as Intrinsic Motivation for Multi-Agent Deep RL](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Social%20Influence.pdf). This paper introduces a games where multiple agent will only maximize their total reward if they choose to collaborate. To achieve collaboration, the paper uses counterfactual reasoning to calculate intrinsic motivation for each agent, and includes it as part of the reward for each agent. The paper uses KL divergence between the marginal distribution and conditional distribution to measure the counterfactuals. This idea seems to be quite general, and it's also quite nice that we could formulate the causal graph of this problem (even in different ways). Here are some extentions I could think of based on this paper:
   * From the simulation video for cleanup task, it seems that if the green apple appears on the rightmost edge and the purple agent moves there to collect the apple, then this agent will just stop there without moving back (this is based on the assumption that the purple agent is lazy to move). However, this will make this purple agent unobservable from the pink agent, which will lead to pink agent also comming to collect apples rather than mining for apples. I think changing the coefficients $\alpha$ and $\beta$ before the external and intrinsic rewards might be able to solve this issue. Or there might be a way to make these two parameters dynamic. 
   * Can we add unobserved confounders into the causal diagram? (like the paper MDP with unobserved confounders: a causal approach)
@@ -107,12 +116,6 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 
 
-<br />
-<br />
-
-## Week 6, Feb 28 - Mar 6:
-
-* Mainly Preparing for midterms this week. Will catch up during the spring break.
 
 
 
@@ -121,7 +124,13 @@ Then I also searched for topics related to Multi-Agent Reinforcement Learning, a
 
 ## Week 7, Mar 7 - Mar 13:
 
-* Mainly Preparing for midterms this week. Will catch up during the spring break.
+* Mainly Preparing for midterms this week. 
+
+* Tried to implement the code from [Social Influence as Intrinsic Motivation for Multi-Agent Deep RL](https://github.com/HL-hanlin/STAT8100_AppliedCausality/blob/main/etc/reference_papers/Social%20Influence.pdf). However, I found that their code need pretty large computational resource, which is not so practical to run on my PC. Then I looked into several other MARL papers, and realized that papers in this field are usually all very computational intensive, which makes me hard to proceed.
+
+
+
+
 
 
 
@@ -159,7 +168,9 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 
 ## Week 9, Mar 21 - Mar 27:
 
+* In this week, I mainly focus on implementing different VAEs. I mainly follow the paper [Object-Aware Regularization for Addressing Causal Confusion in Imitation Learning](https://arxiv.org/pdf/2110.14118.pdf) and tried their VQ-VAEs on Pong Atari Games, which could achieve much better scores than beta-VAEs as in paper [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf). 
 
+* I found that besides VQ-VAEs, people also propose more accurate models including [VQ-VAE2](https://arxiv.org/abs/1906.00446) as well as even more fancy model that includes attentions to VAEs. I coded VQ-VAE2 and tested it on the Pong game, but the performance is not significantly different from VQ-VAE. So I did not continue in this direction. (I guess VAEs should also not be a focus in the project, and we should concentrate more on causal inference itself).
 
 
 
@@ -174,7 +185,9 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 
 * Briefly discussed my project idea with Prof. Blei. I got really stucked at this point since it seems that the yellow indicator light in [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf) is perfectly correlated with brakes, so there's no way to know indicator light is the effect rather than the cause of brake. As suggested by Prof., multiple environments might be a way to direction to go, since unsupervised learning of disentangled representations is fundamentally impossible without inductive biases on both the models and the data as proved by Locatello in the paper [Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations](https://arxiv.org/abs/1811.12359). 
 
-* Therefore, I focus on the Atari Games dataset (especially Pong), and tried to create images from multiple environments. My procedure for creating 2 different environments are as follows: in the first environment, I just use the original image from games screenshot. In the second environment, I masked out the scores at the top of each image, and added a number representing precious actions at the left bottom corner of the image. In this way, the first image could represent an environment with scores (which is a effect of action), and the second image could represent an environment with previous actions (which is cause of action). We use these two variants as our training environments, and we define our testing environment as the image with neither scores nor previous actions (so it is not contaminated by spurious informations). However, I'm not quite sure how to create multiple environments for other Atari Games, since the scores at the top of the image is unique to this Pong dataset. 
+* Therefore, I focus on the Atari Games dataset (especially Pong), and tried to create images from multiple environments. My procedure for creating 2 different environments are as follows: in the first environment, I just use the original image from games screenshot. In the second environment, I masked out the scores at the top of each image, and added a number representing precious actions at the left bottom corner of the image. In this way, the first image could represent an environment with scores (which is a effect of action), and the second image could represent an environment with previous actions (which is cause of action). We use these two variants as our training environments, and we define our testing environment as the image with neither scores nor previous actions (so it is not contaminated by spurious informations). The illustrative image is [here!](https://github.com/HL-hanlin/STAT8101_AppliedCausality/blob/main/etc/Pong_traineval2.png)
+
+* However, I'm not quite sure how to create multiple environments for other Atari Games, since the scores at the top of the image is unique to this Pong dataset. 
 
 
 
@@ -189,7 +202,9 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 
 ## Week 11, Apr 4 - Apr 10:
 
+* This week I deviates from Atari Games and tried to search for other datasets. I found the paper [Causal Imitative Model for Autonomous Driving](https://github.com/vita-epfl/CIM) pretty interesting. It addresses inertia and collision problems in self-driving by discovering the causal graphs and utilizes it to train the policy. 
 
+* Then I started to reproduce their results. They did not provide the dataset, but only with the code to generate these datasets. However, I realized that even these code are also flawed since some important hyperparameters are not disclosed. I tried to guess these hyperparameters and generated some simulated datasets, but non of my trials could achieve the same results as provided in their paper. Pretty sad this week :(
 
 
 
@@ -200,7 +215,11 @@ via Neural Structural Causal Models](https://openaccess.thecvf.com/content/CVPR2
 
 ## Week 12, Apr 11 - Apr 17:
 
-Prof. Blei talks about the paper [Nonlinear Invariant Risk Minimization: A Causal Approach](https://arxiv.org/abs/2102.12353) this week. This paper is a turning point of my project progress! 
+* Prof. Blei talks about the paper [Nonlinear Invariant Risk Minimization: A Causal Approach](https://arxiv.org/abs/2102.12353) this week. This paper is a turning point of my project progress! 
+
+* I did something crazy to look into each paper that cites [Causal Confusion in Imitation Learning](https://arxiv.org/pdf/1905.11979.pdf) (around 130 papers in total!) in order to find some new idea about how to construct multiple environments. Luckily, I found the paper [Invariant Causal Imitation Learning for Generalizable Policies](https://openreview.net/forum?id=715E7e6j4gU) which contains a nice way to create spurious correlates into the OpenAI Gym Tasks. 
+
+* Then I started the process of implementing the iCaRL algorithm in [Lu et al.](https://arxiv.org/abs/2102.12353) with the multiple environments settings in this paper. 
 
 
 
@@ -211,8 +230,12 @@ Prof. Blei talks about the paper [Nonlinear Invariant Risk Minimization: A Causa
 
 ## Week 13, Apr 18 - Apr 24:
 
+* I got stucked in phase 1 for a long time, especially how to implement the non-factorized prior. I initially thought that the latent states X is unobservable, so it is wierd to use it as input to calculate the non-factorized prior as shown in appendix I.2 of Lu et al. Finally, I realized that X is from the encoder which is predicted from the observations, so this is not an issue.
 
+* I found some open source implementation of HSIC and KCIT tests in phase 2. However, these methods is pretty slow and memory consuming. It works for sample size of 5000, but not for 50000 (which is the size I need in my experiment). Therefore, I start to search for other methods, including [Causal Inference on Discrete Data using Additive Noise Models](https://arxiv.org/abs/0911.0280#:~:text=Inferring%20the%20causal%20structure%20of,the%20case%20of%20continuous%20variables.) and [Distribution-Free Learning of Bayesian Network Structure in Continuous Domains](https://www.aaai.org/Papers/AAAI/2005/AAAI05-130.pdf). 
 
+* The method in [Distribution-Free Learning of Bayesian Network Structure in Continuous Domains](https://www.aaai.org/Papers/AAAI/2005/AAAI05-130.pdf) seems reasonable to me, so I started to implement their algorithm on my own (because I didn't find open source implementation of their algorithm). 
+   * Sadly, I think the sample size I need is still too large for this testing method, since it needs to calculate \Gamma(n), and n here could be as large as 50000. I tried several trick in my code to avoid computation of such large number, but it still couldn't work. 
 
 
 
@@ -221,11 +244,22 @@ Prof. Blei talks about the paper [Nonlinear Invariant Risk Minimization: A Causa
 <br />
 <br />
 
-## Week 14, Apr 25 - May 1:
+## Week 19, Apr 25 - May 1:
 
-As suggested by Prof. Blei during the office hour, we need to correct for multiplicity when using multiple independent FCIT tests in phase 2 of our IBC algorithm. The paper [The multiple problems of multiplicity - whether and how to correct for many statistical tests](https://pubmed.ncbi.nlm.nih.gov/26245806/) is a pretty good summary that contains several methods for doing multiplicity correction. I followed the method Sidak-Bonferroni to adjust the confidence level \alpha to correct for multiplicity. 
 
-However, I gradually realized that such confidence level \alpha is also a hyper-parameter that needs to be carefully tuned. In our original method, we define a threshold T. If a latent variable $Z_i$ is tests to be independent with k other latent variables, and the value for k is >= T, then we regard it as one of the direct parents of actions A. So the threshold T is a hyper-parameter that needs to be tuned in our original method. Comparing these old and new approaches, since we always need to tune some hyper-parameter, I guess there is no significant benefit from correction of multiplicity. 
+* Realizing score matching could lead to great variance, I searched for a while and found several methods are designed to tackle this problem, including DCM and SSM. From the paper of [Sliced Score Matching](https://arxiv.org/pdf/1905.07088.pdf), which is published in year 2019, it achieves the best performance in comparison with other methods. Therefore, we adopt their method in replace of the original score matching in phase 1 from Lu et al 2019. From the training loss curve, we indeed see a great benefit from using SSM! The loss curve stabilizes after around 500 iterations. In comparison, we need to choose the trained model which achieves the lowest training loss in our original score matching implementation, which uas a very large variance. I'm pretty happy with this SSM method which indeed helps a lot!
+
+* Thanks David for his suggestions in Slack, I tried the [FCIT](https://github.com/kjchalup/fcit) algorithm in phase 2, which works well! 
+
+* After finishing implementation of phase 2, I proceed to phase 3 this week. However, I found the optimization procedure (Equation 12 in Lu et al.) is too time consuming and not so practical. It takes 100X more time than training a new mapping (neural networks) from observations to latent states. 
+
+* To avoid optimizing equation 12, I tried two approaches: 
+   * (1) for a new observational data point, we calculates its L2 distance with the observation data points in our training set. We could use the latent states from the observational data point with smallest L2 distance as a proxy for the latent states of this new data point. 
+   * (2) learn another mapping from observations to latent states. 
+
+I found that method (2) works better in practice because we could slightly perturb training data points and general more fake data used for training, which could make the our neural network more robust in prediction corresponding latent states. 
+
+
 
 
 
@@ -235,7 +269,10 @@ However, I gradually realized that such confidence level \alpha is also a hyper-
 
 ## Week 15, May 2 - May 8:
 
-Realizing score matching could lead to great variance, I searched for a while and found several methods are designed to tackle this problem, including DCM and SSM. From the paper of [Sliced Score Matching](https://arxiv.org/pdf/1905.07088.pdf), which is published in year 2019, it achieves the best performance in comparison with other methods. Therefore, we adopt their method in replace of the original score matching in phase 1 from Lu et al 2019. From the training loss curve, we indeed see a great benefit from using SSM! The loss curve stabilizes after around 500 iterations. In comparison, we need to choose the trained model which achieves the lowest training loss in our original score matching implementation, which uas a very large variance. I'm pretty happy with this SSM method which indeed helps a lot!
+* As suggested by Prof. Blei during the office hour, we need to correct for multiplicity when using multiple independent FCIT tests in phase 2 of our IBC algorithm. The paper [The multiple problems of multiplicity - whether and how to correct for many statistical tests](https://pubmed.ncbi.nlm.nih.gov/26245806/) is a pretty good summary that contains several methods for doing multiplicity correction. I followed the method Sidak-Bonferroni to adjust the confidence level \alpha to correct for multiplicity. 
+
+* However, I gradually realized that such confidence level \alpha is also a hyper-parameter that needs to be carefully tuned. In our original method, we define a threshold T. If a latent variable $Z_i$ is tests to be independent with k other latent variables, and the value for k is >= T, then we regard it as one of the direct parents of actions A. So the threshold T is a hyper-parameter that needs to be tuned in our original method. Comparing these old and new approaches, since we always need to tune some hyper-parameter, I guess there is no significant benefit from correction of multiplicity. 
+
 
 
 
