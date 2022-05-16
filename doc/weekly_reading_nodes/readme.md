@@ -1,1 +1,1 @@
-This folder contains nodes for assigned weekly readings
+This folder contains part of the nodes for assigned weekly readings.
